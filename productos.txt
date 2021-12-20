@@ -1,0 +1,1 @@
+[{"title":"Amoladora","price":"2500","thumbnail":"https://prueba","id":1},{"title":"Serrucho","price":"2800","thumbnail":"https://prueba2","id":2},{"title":"Cuchillo","price":"3320","thumbnail":"https://prueba3","id":3}]
