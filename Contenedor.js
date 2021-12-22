@@ -96,7 +96,7 @@ class Contenedor {
         
         try {
             const archivo = await fs.promises.readFile(this.rutaArchivo,'utf-8');
-                 let posicion;
+                 let posicion
                  const objeto = JSON.parse(archivo);
                  let a = objeto.map( function (articulo, index, array){
                         if(articulo.id == id)
@@ -109,10 +109,11 @@ class Contenedor {
                  if (posicion != undefined) {
                     objeto.splice(posicion,1) //elimino el objeto literal del id correspondiente
                     await fs.promises.writeFile(this.rutaArchivo,JSON.stringify(objeto));
+                    return "ok"
                     }
                 else
                 {
-                    console.log('id no encontrado');
+                    return "error"
                 }
             }      
              
